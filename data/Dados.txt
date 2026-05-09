@@ -1,0 +1,45 @@
+// Dados do supermercado "Compra Aqui Lda."
+// Formato: ver enunciado da UC de Estruturas de Dados
+6                          // Numero de caixas
+Caixa1 : 1                 // Caixa1 esta activa
+6                          // Numero de clientes
+Alice : 12                 // Cliente Alice com 12 produtos
+Beatriz : 5
+Carlos : 18
+Diana : 3
+Eduardo : 9
+Filipa : 14
+Caixa2 : 1                 // Caixa2 esta activa
+6                          // Numero de clientes
+Goncalo : 7
+Helena : 22
+Igor : 4
+Joana : 11
+Laura : 6
+Manuel : 16
+Caixa3 : 1                 // Caixa3 esta activa
+6                          // Numero de clientes
+Nadia : 8
+Octavio : 10
+Patricia : 25
+Quim : 2
+Rita : 13
+Sergio : 17
+Caixa4 : 0                 // Caixa4 esta desactivada
+0                          // Numero de clientes
+Caixa5 : 1                 // Caixa5 esta activa
+6                          // Numero de clientes
+Tomas : 5
+Ursula : 19
+Vasco : 6
+Wanda : 3
+Xavier : 15
+Yara : 9
+Caixa6 : 1                 // Caixa6 esta activa
+6                          // Numero de clientes
+Zacarias : 21
+Amelia : 4
+Bernardo : 12
+Catarina : 7
+Daniel : 14
+Esmeralda : 28

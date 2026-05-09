@@ -1,0 +1,19 @@
+# Artefactos de compilacao
+build/
+*.o
+*.obj
+compraaqui
+compraaqui.exe
+
+# Logs e ficheiros gerados em runtime
+logs/
+
+# Ficheiros locais de IDE/editor
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Temporarios do sistema
+Thumbs.db
+Desktop.ini

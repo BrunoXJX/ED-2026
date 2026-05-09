@@ -1,0 +1,11 @@
+Projeto: Compra Aqui Lda. - Gestao de Caixas
+Unidade Curricular: Estruturas de Dados (ED)
+Ano lectivo: 2025/2026
+Curso: Engenharia Informatica
+Instituicao: ESTGV - Escola Superior de Tecnologia e Gestao de Viseu
+
+Autores:
+- Bruno Jesus — 25007
+- A definir
+- A definir
+- A definir

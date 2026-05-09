@@ -1,0 +1,10 @@
+# Configuracao do supermercado "Compra Aqui Lda."
+# Formato: CHAVE = VALOR. Linhas a comecar por # sao comentarios.
+
+MAX_ESPERA       = 120
+N_CAIXAS         = 6
+TEMPO_PRODUTO    = 6
+MAX_PRECO        = 40
+MAX_FILA         = 7
+MIN_FILA         = 3
+TICK_VERIFICACAO = 5
