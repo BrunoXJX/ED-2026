@@ -45,23 +45,34 @@ int calendario_agendar(Calendario_t   *c,
     novo->versao_ficha = (ficha) ? ficha->versao : 0;
     novo->seguinte     = NULL;
 
-    /* Insercao ordenada por instante crescente. */
+   /* Inserção ordenada por instante crescente.
+     *
+     * Caso especial: lista vazia ou novo instante é o mais pequeno. */
     if (!c->cabeca || c->cabeca->instante > instante) {
         novo->seguinte = c->cabeca;
         c->cabeca      = novo;
-    } else {
-        cur = c->cabeca;
-        ant = NULL;
-        while (cur && cur->instante <= instante) {
-            ant = cur;
-            cur = cur->seguinte;
-        }
-        novo->seguinte = cur;
-        if (ant) ant->seguinte = novo;
+        c->total++;
+        return 1;
     }
+
+    /* Caso geral: avança até encontrar o ponto de inserção.
+     * Garantia: o loop executa pelo menos uma vez (c->cabeca->instante
+     * <= instante), por isso ant != NULL no final.                    */
+    cur = c->cabeca;
+    ant = NULL;
+    while (cur && cur->instante <= instante) {
+        ant = cur;
+        cur = cur->seguinte;
+    }
+    /* ant != NULL aqui — o assert documenta a invariante. */
+    assert(ant != NULL);
+    novo->seguinte = cur;
+    ant->seguinte  = novo;
+
     c->total++;
     return 1;
 }
+
 
 int calendario_proximo_instante(const Calendario_t *c)
 {
