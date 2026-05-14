@@ -1,0 +1,262 @@
+ 24 obsoletos ao tick=0 — leitor_dados.c, redistribuição inicial incrementa versao múltiplas vezes antes do tick=0
+
+Terminal #6 atendeu 1 (atend=1, art=5) e Terminal #5 também 1. O tempo de serviço estimado bate certo (670s, 543s) mas os atendimentos não estão a a avançar
+
+Após o B4 nada mudou — o balanço não fechou nem abriu nenhuma caixa, e o Terminal #1 continua bloqueado com 14 pessoas.
+
++-- Terminal #1 ----------------------------+
+| operador          : Bruno Sousa            |
+| estado            : ABERTO                 |
+| pessoas (fila+at) : 14                     |
+| tempo est. total  :                670 s |
+| atendidos         : 0                      |
+| artigos process.  : 0                      |
+| t. tot. espera    :                  1 s |
+| t. tot. servico   :                  0 s |
+| ofertas concedid. : 0                      |
+| prejuizo total    :               0.00 EUR |
++--------------------------------------------+
+  >> em atendimento agora:
+  #25   Zacarias           art=21  t.serv=  81s  estado=ATENDIMENTO term= 1
+
+Após consulta no C1, o terminal 1 está a atender o Zacarias mas indica 0 artigos processados
+
+=== SNAPSHOT (tick=5) ============================
+ terminais: 6 total, 4 abertos, 4 activos
+ clientes:  27 em espera, 0 ja atendidos
+ calendario: 54 eventos pendentes (24 obsoletos)
+ ofertas concedidas: 0 (prejuizo=0.00 EUR)
+---------------------------------------------------
+  Terminal #1   ABERTO     oper=Bruno Sousa     pessoas= 6  est.servico= 260s  atend=  0  art=   0  ofertas= 0
+  Terminal #2   FECHADO    oper=Carla Lopes     pessoas= 0  est.servico=   0s  atend=  0  art=   0  ofertas= 0
+  Terminal #3   ABERTO     oper=Diogo Reis      pessoas= 8  est.servico= 343s  atend=  0  art=   0  ofertas= 0
+  Terminal #4   FECHADO    oper=Eva Castro      pessoas= 0  est.servico=   0s  atend=  0  art=   0  ofertas= 0
+  Terminal #5   ABERTO     oper=Fabio Mendes    pessoas= 8  est.servico= 343s  atend=  0  art=   0  ofertas= 0
+  Terminal #6   ABERTO     oper=Gisela Tavares  pessoas= 8  est.servico= 410s  atend=  0  art=   0  ofertas= 0
+
++======================================================+
+|  GESTAO DE CAIXAS ÔÇö Compra Aqui Lda.                 |
+|  tick=5       terminais=6   abertos=4   espera=27    |
++======================================================+
+|  [A] OPERACAO          [B] SIMULACAO                |
+|  [C] CONSULTA          [D] METRICAS                 |
+|  [E] SISTEMA                                         |
++======================================================+
+Escolha (ex: A1, B3, ...): c4
+  t=   19  FIM_ATENDIMENTO     term=#5  ficha=#19 v=2/2
+  t=   31  FIM_ATENDIMENTO     term=#3  ficha=#13 v=2/2
+  t=   82  FIM_ATENDIMENTO     term=#6  ficha=#25 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#1 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#2 v=1/3
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#3 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#4 v=1/4
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#5 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#6 v=1/4
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#7 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#8 v=1/3
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#9 v=1/3
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#10 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#11 v=1/3
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#12 v=1/3
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#13 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#14 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#15 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#16 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#17 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#18 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#19 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#20 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#21 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#22 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#23 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#24 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#25 v=1/2
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#26 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#27 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#28 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#29 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#30 v=1/1
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#1 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#2 v=2/3
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#3 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#4 v=2/4
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#5 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#2  ficha=#6 v=2/4
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#7 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#3  ficha=#8 v=2/3
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#9 v=2/3
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#10 v=2/2
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#11 v=2/3
+  t=  120  OFERTA_DEVIDA       term=#5  ficha=#12 v=2/3
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#2 v=3/3
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#4 v=3/4
+  t=  120  OFERTA_DEVIDA       term=#6  ficha=#6 v=3/4
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#8 v=3/3
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#12 v=3/3
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#11 v=3/3
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#9 v=3/3
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#6 v=4/4
+  t=  120  OFERTA_DEVIDA       term=#1  ficha=#4 v=4/4
+
+Cada redistribuição agendou uma nova oferta. Só a última versão é válida — as anteriores são obsoletas e serão descartadas pelo lazy deletion. Funcionalmente correcto mas muito ruidoso.
+
+Ao tick 25, tem-se
+
++-- Terminal #1 ----------------------------+
+| operador          : Bruno Sousa            |
+| estado            : ABERTO                 |
+| pessoas (fila+at) : 6                      |
+| tempo est. total  :                260 s |
+| atendidos         : 0                      |
+| artigos process.  : 0                      |
+| t. tot. espera    :                  6 s |
+| t. tot. servico   :                  0 s |
+| ofertas concedid. : 0                      |
+| prejuizo total    :               0.00 EUR |
++--------------------------------------------+
+  >> em atendimento agora:
+  #8    Helena             art=22  t.serv=  91s  estado=ATENDIMENTO term= 1
+  >> fila:
+    [ 1]   #12   Manuel             art=16  t.serv=  66s  estado=AGUARDA     term= 1
+    [ 2]   #11   Laura              art= 6  t.serv=  22s  estado=AGUARDA     term= 1
+    [ 3]   #9    Igor               art= 4  t.serv=  16s  estado=AGUARDA     term= 1
+    [ 4]   #6    Filipa             art=14  t.serv=  56s  estado=AGUARDA     term= 1
+    [ 5]   #4    Diana              art= 3  t.serv=   9s  estado=AGUARDA     term= 1
+
+Confirma-se o bug dos art. processados
+
+=== SNAPSHOT (tick=75) ============================
+ terminais: 6 total, 4 abertos, 4 activos
+ clientes:  23 em espera, 3 ja atendidos
+ calendario: 55 eventos pendentes (28 obsoletos)
+ ofertas concedidas: 0 (prejuizo=0.00 EUR)
+---------------------------------------------------
+  Terminal #1   ABERTO     oper=Bruno Sousa     pessoas= 6  est.servico= 260s  atend=  0  art=   0  ofertas= 0
+  Terminal #2   FECHADO    oper=Carla Lopes     pessoas= 0  est.servico=   0s  atend=  0  art=   0  ofertas= 0
+  Terminal #3   ABERTO     oper=Diogo Reis      pessoas= 6  est.servico= 275s  atend=  2  art=  18  ofertas= 0
+  Terminal #4   FECHADO    oper=Eva Castro      pessoas= 0  est.servico=   0s  atend=  0  art=   0  ofertas= 0
+  Terminal #5   ABERTO     oper=Fabio Mendes    pessoas= 7  est.servico= 325s  atend=  1  art=   5  ofertas= 0
+  Terminal #6   ABERTO     oper=Gisela Tavares  pessoas= 8  est.servico= 410s  atend=  0  art=   0  ofertas= 0
+
++======================================================+
+|  GESTAO DE CAIXAS ÔÇö Compra Aqui Lda.                 |
+|  tick=75      terminais=6   abertos=4   espera=23    |
++======================================================+
+|  [A] OPERACAO          [B] SIMULACAO                |
+|  [C] CONSULTA          [D] METRICAS                 |
+|  [E] SISTEMA                                         |
++======================================================+
+Escolha (ex: A1, B3, ...): c2
+ id do terminal: 1
+
++-- Terminal #1 ----------------------------+
+| operador          : Bruno Sousa            |
+| estado            : ABERTO                 |
+| pessoas (fila+at) : 6                      |
+| tempo est. total  :                260 s |
+| atendidos         : 0                      |
+| artigos process.  : 0                      |
+| t. tot. espera    :                  6 s |
+| t. tot. servico   :                  0 s |
+| ofertas concedid. : 0                      |
+| prejuizo total    :               0.00 EUR |
++--------------------------------------------+
+  >> em atendimento agora:
+  #8    Helena             art=22  t.serv=  91s  estado=ATENDIMENTO term= 1
+  >> fila:
+    [ 1]   #12   Manuel             art=16  t.serv=  66s  estado=AGUARDA     term= 1
+    [ 2]   #11   Laura              art= 6  t.serv=  22s  estado=AGUARDA     term= 1
+    [ 3]   #9    Igor               art= 4  t.serv=  16s  estado=AGUARDA     term= 1
+    [ 4]   #6    Filipa             art=14  t.serv=  56s  estado=AGUARDA     term= 1
+    [ 5]   #4    Diana              art= 3  t.serv=   9s  estado=AGUARDA     term= 1
+
++======================================================+
+
+No tick 75 Helena continua com 22 artigos
+
+Atualiza quando termina o atendimento.
+
+Fecho automático funcionou
+
+O balanço automático drena terminais sem considerar os que já
+  estão em modo DRENANDO. A função media_clientes_filas_abertas
+  só conta terminais EST_TERMINAL_ABERTO, ignorando os DRENANDO.
+  Resultado: o sistema pode ficar com apenas 1 caixa aberta e
+  várias em drenagem simultânea, sobrecarregando essa caixa.
+
+Reprodução:
+  1. Iniciar com 4 caixas abertas e poucos clientes
+  2. Aguardar tick=185: Terminal #1 entra em DRENANDO (correcto)
+  3. tick=205: Terminal #5 também entra em DRENANDO (média=4.5 > MIN_FILA — errado)
+  4. tick=225: Terminal #3 também drena — só 1 caixa aberta com 7 clientes
+
+Cliente Helena (#8) com 22 artigos tem t.serv=91s.
+Esperado: 22 × TEMPO_PRODUTO(6) = 132s.
+
++-- Ficha #25 ----------------------------------+
+| nome              : Zacarias                     |
+| estado            : AGUARDA                      |
+| terminal actual   : 6                            |
+| artigos no cesto  : 21                           |
+| total a pagar     :                  411.76 EUR |
+| t. servico est.   :                      81 s |
+| t. chegada        :                       0 s |
+| t. inicio serv.   :                      -1 s |
+| t. saida          :                      -1 s |
+| recebeu oferta    : nao                          |
++-----------------------------------------------+
+
+21*6 = 126s
+
+Apenas encontra o utilizador com a letra maiúscula no inicio, é case-sensitive.
+
++-- Atendidos pelo Terminal #1 (Bruno Sousa) ----+
+    1. #6    Filipa             art=14  total= 360.38 EUR  [OFERTA]
+    2. #5    Eduardo            art= 9  total= 168.61 EUR  [OFERTA]
+    3. #4    Diana              art= 3  total=  59.82 EUR  [OFERTA]
+    4. #3    Carlos             art=18  total= 322.24 EUR
+    5. #2    Beatriz            art= 5  total=  31.34 EUR
+    6. #1    Alice              art=12  total= 271.74 EUR
++-------------------------------------------+
+
++-- Atendidos pelo Terminal #2 (Carla Lopes) ----+
+    1. #12   Manuel             art=16  total= 341.71 EUR  [OFERTA]
+    2. #11   Laura              art= 6  total=  93.51 EUR  [OFERTA]
+    3. #10   Joana              art=11  total= 246.61 EUR  [OFERTA]
+    4. #9    Igor               art= 4  total=  52.08 EUR
+    5. #8    Helena             art=22  total= 410.23 EUR
+    6. #7    Goncalo            art= 7  total= 116.49 EUR
++-------------------------------------------+
+
++-- Atendidos pelo Terminal #3 (Diogo Reis) ----+
+    1. #18   Sergio             art=17  total= 332.00 EUR  [OFERTA]
+    2. #17   Rita               art=13  total= 254.73 EUR  [OFERTA]
+    3. #16   Quim               art= 2  total=  34.67 EUR  [OFERTA]
+    4. #15   Patricia           art=25  total= 349.06 EUR
+    5. #14   Octavio            art=10  total= 171.39 EUR
+    6. #13   Nadia              art= 8  total= 227.16 EUR
++-------------------------------------------+
+
++-- Atendidos pelo Terminal #4 (Eva Castro) ----+
+| (nenhum cliente atendido ainda)           |
++-------------------------------------------+
+
++-- Atendidos pelo Terminal #5 (Fabio Mendes) ----+
+    1. #24   Yara               art= 9  total= 146.44 EUR  [OFERTA]
+    2. #23   Xavier             art=15  total= 357.65 EUR  [OFERTA]
+    3. #22   Wanda              art= 3  total=  56.55 EUR  [OFERTA]
+    4. #21   Vasco              art= 6  total= 124.64 EUR
+    5. #20   Ursula             art=19  total= 402.62 EUR
+    6. #19   Tomas              art= 5  total=  51.14 EUR
++-------------------------------------------+
+
++-- Atendidos pelo Terminal #6 (Gisela Tavares) ----+
+    1. #30   Esmeralda          art=28  total= 546.86 EUR  [OFERTA]
+    2. #29   Daniel             art=14  total= 280.65 EUR  [OFERTA]
+    3. #28   Catarina           art= 7  total= 143.31 EUR  [OFERTA]
+    4. #27   Bernardo           art=12  total= 310.63 EUR
+    5. #26   Amelia             art= 4  total=  67.43 EUR
+    6. #25   Zacarias           art=21  total= 411.76 EUR
++-------------------------------------------+
+
+lista invertida
